@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app='ContactsApp'><!-- Bootstrap the Angular App to the page. -->
+	<head>
+		<title>Contacts | AngularJS</title>
+		<base href='/'><!-- Tells Angular what path to use when it gets any front-end resources. -->
+		<link rel="stylesheet" href="src/bootstrap.min.css" type="text/css" media="screen" title="flatty theme" charset="utf-8">
+		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen" title="flatty theme" charset="utf-8">
+	</head>
+	
+	<body>
+		<div class="conatainer">
+			<div class="page-header">
+				<h1>Contacts</h1>
+			</div><!-- /.page-header -->
+			<div class='row'>
+				<div class='col-sm-12' ng-view>
+					
+				</div><!-- /Bootstrap .col-sm-12 || ng-view -->
+			</div>
+		</div><!-- /Bootstrap container class -->
+		<script src='jquery/dist/jquery.min.js'></script>
+		<script src='bootstrap/dist/js/bootstrap.min.js'></script>
+		<script src='angular/angular.min.js'></script>
+		<script src='angular-route/angular-route.min.js'></script>
+		<script src='angular-resource/angular-resource.min.js'></script>
+		<script src='src/app.js'></script>
+		<script src='src/controllers.js'></script>
+		<script src='src/factories.js'></script>
+	</body>
+</html>
