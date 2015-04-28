@@ -7,13 +7,13 @@ var express 	= require('express'),
 
 router
 	.use(function (req, res, next) {
-		if (!req.user) req.user = { id: 1 };
+		if (!req.user) req.user = { id: 1 }; // If their is no request user data, set user id:1.
 		next();
 	})
 	.use(bodyParser.json())
 	.route('/contact')
 		.get(function (req, res) {
-			db.find({ userId: parseInt(req.user.id, 1) }, function (err, data) { // Return all records of the userId.
+			db.find({ userId: parseInt(req.user.id, 10) }, function (err, data) { // Return all records of the userId.
 				res.json(data);
 			});
 		})
@@ -28,9 +28,9 @@ router
 
 router
 		.param('id', function(req, res, next) {
-			req.dbQuery = { id: parseInt(req.params.id, 1) } // The query object.
+			req.dbQuery = { id: parseInt(req.params.id, 10) } // The query object.
 		})
-		.route('/contacts/:id')
+		.route('/contact/:id')
 			.get(function (req, res) {
 				db.findOne(req.dbQuery, function (err, data) {
 					res.json(data); // Send data as json to the browser.

@@ -1,4 +1,4 @@
-angular.module('ContactsApp')
+angular.module('ContactsApp') // Reference the Angular App.
 	.factory('Contact', function($resource) {
 		return $resource('/api/contact/:id', { id: '@id' }, {
 			'update': { method: 'PUT' }
