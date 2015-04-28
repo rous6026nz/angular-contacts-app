@@ -1,32 +1,21 @@
 [
 	{
-		"id"		: 1,
-		"userId"	: 1,
-		"firstName"	: ["Zaine", "text"],
-		"lastName"	: ["Kingi", "text"]
+		"id"			: 1,
+		"userId"		: 1,
+		"firstName"		: ["Lance", "text"],
+		"lastName"		: ["Kingi", "text"]
 	},
 	{
-		"id"		: 2,
-		"userId"	: 2,
-		"firstName"	: ["Avalon", "text"],
-		"lastName"	: ["Kingi", "text"]
+		"id"			: 2,
+		"userId"		: 2,
+		"firstName"		: ["Avalon", "text"],
+		"lastName"		: ["Kingi", "text"]
 	},
 	{
-		"id"		: 3,
-		"userId"	: 3,
-		"firstName"	: ["Mkenzi", "text"],
-		"lastName"	: ["Kingi", "text"]
-	},
-	{
-		"id"		: 4,
-		"userId"	: 4,
-		"firstName"	: ["Cara", "text"],
-		"lastName"	: ["Tasker", "text"]
-	},
-	{
-		"id"		: 5,
-		"userId"	: 5,
-		"firstName"	: ["Mary", "text"],
-		"lastName"	: ["Parata", "text"]
-	},
+		"id"			: 3,
+		"userId"		: 3,
+		"firstName"		: ["Mkenzi", "text"],
+		"lastName"		: ["Kingi", "text"]
+	}
+	
 ]
