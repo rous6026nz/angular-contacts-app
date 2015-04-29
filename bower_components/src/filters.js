@@ -1,1 +1,8 @@
 angular.module('ContactsApp')
+	.filter('labelCase', function() {
+		return function(input) {
+			input = input.replace(/([A-Z])/g, ' $1'); // Get the capital leter and prepend a space.
+			return input[0].toUpperCase() // Get the first letter and convert to uppercase.
+			+ input.slice(1); // Concatinate every letter except the first letter.
+		};
+	});
