@@ -8,4 +8,4 @@ app
 	.get('*', function (req, res) {
 		res.sendfile('bower_components/main.html'); // Response method for all responses not caught up until the GET method.
 	})
-	.listen(3000); // Start the spplication.
+	.listen(3000); // Start the application.
