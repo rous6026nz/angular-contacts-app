@@ -11,7 +11,7 @@ angular.module('ContactsApp')
 		$scope.sort.field = 'firstName';
 		$scope.sort.order = false;
 		
-		// $scope.show = function(id) {
-		// 	$location.url('/contact/' + id;)
-		// };
+		$scope.show = function(id) {
+			$location.url('/contact/' + id);
+		};
 	});
