@@ -5,4 +5,15 @@ angular.module('ContactsApp')
 			return input[0].toUpperCase() // Get the first letter and convert to uppercase.
 			+ input.slice(1); // Concatinate every letter except the first letter.
 		};
+	})
+	.filter('keyFilter', function() {
+		return function(obj, query) {
+			var result = {};
+			angular.forEach(obj, function(val, key) {
+				if(key !==query) {
+					result[key] = val;
+				}
+			});
+			return result;
+		}
 	});
