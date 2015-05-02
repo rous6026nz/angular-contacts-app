@@ -1,8 +1,5 @@
-<div class='row form-group' ng-form='{{ field }}' ng-class='{ 'has-error': {{ field }}.$dirty && {{ field }}.$invalid }'>
-	<label class='col-sm-2 control-label'>
-		{{ field | labelCase }}
-		<span ng-if='required'>*</span>
-	</label> <!-- /Bootstrap .col-sm-2 -->
+<div class='row form-group' ng-form='{{ field }}' ng-class='{ "has-error": {{ field }}.$dirty && {{ field }}.$invalid }'>
+	<label class='col-sm-2 control-label'> {{ field | labelCase }} <span ng-if='required'>*</span></label> <!-- /Bootstrap .col-sm-2 -->
 	
 	<div class='col-sm-6' ng-switch='required'>
 		<input ng-switch-when='true' ng-model='record[field][0]' type='{{ record[field][1] }}' class='form-control' required ng-change='update()' ng-blur='blurUpdate()' />
@@ -16,8 +13,8 @@
 	</div> <!-- /Bootstrap .col-sm-6 -->
 	
 	<!-- Error handling container. -->
-	<div class='col-sm-4 has-error' ng-show='{{ field }}.$dirty && {{ fields }}.$invalid' ng-messages='{{ field }}.error'>
+	<div class='col-sm-4 has-error' ng-show='{{ field }}.$dirty && {{ fields }}.$invalid' ng-messages='{{ field }}.$error'>
 		<p class='control-label' ng-messages='required'>{{ field | labelCase }} is required.</p>
 		<p class='control-label' ng-repeat='(k, v) in types' ng-message='{{ k }}'> {{ field | labelCase }} {{ v[1] }}</p>
 	</div> <!-- /Boostrap .col-sm-4 | .has-error -->
-</div> <!-- /Bootstrp .row & .form-group -->
+</div>
