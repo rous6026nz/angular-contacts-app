@@ -17,7 +17,7 @@ angular.module('ContactsApp')
 	.directive('formField', function($timeout, FieldTypes) { // $timeout - AngularJS SetTimeOut method for the ng-update attribute on input fields. 
 		return {
 			restrict		: 'EA', // restict this object to be used as an element or attribute.
-			templateUrl		: 'views/form-fields.html',
+			templateUrl		: 'views/form-field.html',
 			replace			: true, // HTML from form-fields.html will replace form-field element in new.html, otherwise the HTML will be placed within the form-field element in 					new.html.
 			scope			: { // determines what attributes on the form-field element will be available in the directive.
 									record		: '=', // changes made within this directive updates the controller - 2 way binding directive.
@@ -25,11 +25,14 @@ angular.module('ContactsApp')
 									live		: '@', // read only - 1 way binding directive.
 									required	: '@' // read only - 1 way binding directive.
 							  },
-							link function($scope, element, attr) { //allows for modifications to be made on this directive when it replaces the current form-field element in 																	new.html.
+							link: function($scope, element, attr) { //allows for modifications to be made on this directive when it replaces the current form-field element in 																	new.html.
+								$scope.$on('record:invalid', function() {
+									$scope[$scope.field].$setDirty();
+								});
 								$scope.types = FieldTypes;
 
 								$scope.remove = function(field) {
-									delete.$scope.record[field];
+									delete $scope.record[field];
 									$scope.blurUpdate();
 								};
 								// ng-blur update function for input field elements.
@@ -41,7 +44,7 @@ angular.module('ContactsApp')
 									}
 								};
 								// ng-update function for input field elements.
-								var $timeout;
+								var $saveTimeout;
 								$scope.update = function() {
 									$timeout.cancel(saveTimeout); // Cancel the update after keyup action.
 									saveTimeout = $timeout($scope.blurUpdate, 1000); // update the records after a 1 sec delay, saves to saveTimeout variable.
