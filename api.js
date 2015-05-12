@@ -6,10 +6,6 @@ var express 	= require('express'),
 	router		= express.Router(); // Instantiate a new router object.
 
 router
-	.use(function (req, res, next) {
-		if (!req.user) req.user = { id: 1 }; // If their is no request user data, set user id:1.
-		next();
-	})
 	.use(bodyParser.json())
 	.route('/contact')
 		.get(function (req, res) {
