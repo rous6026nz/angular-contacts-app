@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contacts | AngularJS</title>
+		<base href='/'><!-- Tells Angular what path to use when it gets any front-end resources. -->
+		<link rel="stylesheet" href="src/bootstrap.min.css" type="text/css" media="screen" title="flatty theme" charset="utf-8">
+		<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css" type="text/css" media="screen" title="flatty theme" charset="utf-8">
+	</head>
+	
+	<body>
+		<div class="conatainer">
+			<div class="page-header">
+				<h1>Contacts</h1>
+			</div><!-- /.page-header -->
+			<!-- Navigation -->
+			<div class='row'>
+				<div class='col-sm-12'>
+					<div class='col-sm-6'>
+						<form class='form-horizontal' action='/login' method='post'>
+							<h2>Log In</h2>
+							<div class='row form-group'>
+								<label for='username' class='control-label col-sm-2'> Username: </label>
+								<div class='col-sm-8'>
+									<input type='text' name='username' class='form-control' required />
+								</div><!-- /Bootstrap .col-sm-8 -->
+							</div><!-- /Bootstrap .row & form-group -->
+							
+							<div class='row form-group'>
+								<label for='password' class='control-label col-sm-2'> Password: </label>
+								<div class='col-sm-8'>
+									<input type='password' name='password' class='form-control' required />
+								</div><!-- /Bootstrap .col-sm-8 -->
+							</div><!-- /Bootstrap .row & form-group -->
+							
+							<div class='row form-group'>
+								<div class='col-sm-offset-2 col-sm-10'>
+									<button class='btn btn-primary'>Log In</button>
+								</div><!-- /Bootstrap .col-sm-offset-2 & .col-sm-10 -->
+							</div><!-- /Bootstrap .row & .form-group -->
+						</form>
+					</div><!-- /Bootstrap .col-sm-6 -->
+					
+					<div class='col-sm-6'>
+						<form class='form-horizontal' action='/register' method='post'>
+							<h2>Sign Up</h2>
+							<div class='row form-group'>
+								<label for='username' class='control-label col-sm-2'> Username: </label>
+								<div class='col-sm-8'>
+									<input type='text' name='username' class='form-control' required />
+								</div><!-- /Bootstrap .col-sm-8 -->
+							</div><!-- /Bootstrap .row & form-group -->
+							
+							<div class='row form-group'>
+								<label for='password' class='control-label col-sm-2'> Password: </label>
+								<div class='col-sm-8'>
+									<input type='password' name='password' class='form-control' required />
+								</div><!-- /Bootstrap .col-sm-8 -->
+							</div><!-- /Bootstrap .row & form-group -->
+							
+							<div class='row form-group'>
+								<div class='col-sm-offset-2 col-sm-10'>
+									<button class='btn btn-primary'>Sign Up</button>
+								</div><!-- /Bootstrap .col-sm-offset-2 & .col-sm-10 -->
+							</div><!-- /Bootstrap .row & .form-group -->
+						</form>
+					</div><!-- /Bootstrap .col-sm-6 -->
+				</div><!-- /Bootstrap .col-sm-12 -->
+			</div><!-- /Bootstrap .row -->
+		</div><!-- /Bootstrap container class -->
+	</body>
+</html>
