@@ -15,6 +15,10 @@ angular.module('ContactsApp', ['ngRoute', 'ngResource', 'ngMessages'])
 				controller: 'SingleController',
 				templateUrl: 'views/single.html'
 			})
+			.when('/setting', {
+				conroller: 'SettingsController',
+				templateUrl: 'views/settings.html'
+			})
 			.otherwise({
 				redirectTo: '/contacts'
 			});
