@@ -24,4 +24,10 @@ angular.module('ContactsApp', ['ngRoute', 'ngResource', 'ngMessages'])
 			});
 			
 		$locationProvider.html5Mode(true);
+})
+.value('options', {}) // Set options for the application.
+.run(function (options, Fields){
+	Fields.get().success(function (data) {
+		options.displayed_fields = data;
+	});
 });
