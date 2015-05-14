@@ -19,6 +19,7 @@ router
 		resave: true,
 		saveUninitialized: true 
 	}))
+	
 	.get('/login', function(req, res) {
 		res.sendfile('bower_components/login.html');
 	})
@@ -56,7 +57,7 @@ router
 		})
 	})
 	
-	.get('logout', function(req, res) {
+	.get('/logout', function(req, res) {
 		req.session.userId = null;
 		res.redirect('/');
 	})
