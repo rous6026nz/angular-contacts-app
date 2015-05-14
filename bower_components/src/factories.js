@@ -26,7 +26,7 @@ angular.module('ContactsApp') // Reference the Angular App.
 					return $http.post(url, { fields: newFields });
 				},
 				headers: function () {
-					return.deferred.promise;
+					return.deferred.promise; // Returns the allFields array.
 				}
 			};
 	});
