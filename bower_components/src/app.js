@@ -15,7 +15,7 @@ angular.module('ContactsApp', ['ngRoute', 'ngResource', 'ngMessages'])
 				controller: 'SingleController',
 				templateUrl: 'views/single.html'
 			})
-			.when('/setting', {
+			.when('/settings', {
 				conroller: 'SettingsController',
 				templateUrl: 'views/settings.html'
 			})
@@ -24,10 +24,10 @@ angular.module('ContactsApp', ['ngRoute', 'ngResource', 'ngMessages'])
 			});
 			
 		$locationProvider.html5Mode(true);
-})
-.value('options', {}) // Set options for the application.
-.run(function (options, Fields){
-	Fields.get().success(function (data) {
-		options.displayed_fields = data;
+	})
+	.value('options', {}) // Set options for the application.
+	.run(function (options, Fields){
+		Fields.get().success(function (data) {
+			options.displayed_fields = data;
+		});
 	});
-});
